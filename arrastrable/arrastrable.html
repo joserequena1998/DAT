@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>Curso Leaflet</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+      crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+      integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+      crossorigin=""></script>
+    <style>
+			body {
+			  padding: 0;
+			  margin: 0;
+			}
+			html,
+			body,
+			#map {
+			  height: 100%;
+			  width: 100%;
+			}
+
+			.wrapper {
+			  display: grid;
+			  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+			}
+			.box {
+			  height: 100vh;
+			}
+			.box.column-1 {
+			  border-right: 2px solid #333;
+			}
+			.box.column-2 {
+			  padding: 2rem;
+			}
+		</style>
+    <script defer src="js/arrastrable.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="box column-1">
+        <div id="map"></div>
+      </div>
+      <div class="box column-2">
+        <p>Has empezado clickando en:</p>
+        <ul>
+					<li>
+						Lat: <span id="lat1"></span>
+					</li>
+
+					<li>
+						Long: <span id="lng1"></span>
+					</li>
+				</ul>
+
+				<p>Has terminado clickando en:</p>
+        <ul>
+					<li>
+						Lat: <span id="lat"></span>
+					</li>
+
+					<li>
+						Long: <span id="lng"></span>
+					</li>
+				</ul>
+        <div id="address">
+
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
